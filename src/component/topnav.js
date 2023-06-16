@@ -5,8 +5,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
 
-function NavScrollExample() {
+function NavScrollExample({acceptCount,setAcceptCount}) {
+
+  
+  
   return (
     <Navbar bg="transparent" expand="lg">
       <Container fluid>
@@ -37,7 +41,7 @@ function NavScrollExample() {
             
             <Button variant="outline-success">
                 Cart
-                <span className='mx-2'>0</span>
+                <span className='mx-2'>{acceptCount}</span>
             </Button>
           </Form>
         </Navbar.Collapse>
